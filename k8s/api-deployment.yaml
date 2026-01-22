@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: arielizralevitch/api_14:latest
+          image: arielizralevitch/api_test:v3
           ports:
             - containerPort: 8080
           env:

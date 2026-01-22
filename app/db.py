@@ -6,6 +6,8 @@ def get_connection():
         host=os.getenv("MYSQL_HOST", "localhost"),
         user=os.getenv("MYSQL_USER", "root"),
         password=os.getenv("MYSQL_PASSWORD", "password"),
+        database=os.getenv("MYSQL_DATABASE", "weapon_db")
+
     )
 
 def init_db():

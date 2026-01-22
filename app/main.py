@@ -48,7 +48,7 @@ def upload_csv(file: UploadFile = File(...)):
     df["risk_level"] = pd.cut(df["range_km"], bins=bins, labels=labels)
 
     df = df.fillna("Unknown")
-    weapon_list = df.mode_dump()
+    weapon_list = df.to_dict(orient="records")
 
     conn = get_connection()
     cursor = conn.cursor()
