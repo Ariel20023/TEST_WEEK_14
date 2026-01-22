@@ -1,0 +1,15 @@
+The process of building images
+docker build -t arielizralevitch/api_14 .
+
+
+Sending to docker hub
+docker push arielizralevitch/api_14 .
+
+
+Creating images for OpenShift
+oc apply -f ./k8s
+
+
+Testing if it actually works and runs
+oc get pods
+oc get images
